@@ -26,7 +26,7 @@ Este projeto utiliza LangChain e OpenAI para gerar automaticamente arquivos de t
    Crie (ou edite) o arquivo `.env` na raiz do projeto com o seguinte conteúdo:
    ```env
    OPENAI_API_KEY='sua-chave-openai-aqui'
-   FILE_PATH='functions.py'
+   FILE_PATH='<nome_do_arquivo>.py'
    ```
    - Substitua `'sua-chave-openai-aqui'` pela sua chave da OpenAI.
    - O `FILE_PATH` deve apontar para o arquivo Python que contém o código a ser testado.
@@ -35,12 +35,12 @@ Este projeto utiliza LangChain e OpenAI para gerar automaticamente arquivos de t
    ```bash
    python test_generating_agent.py
    ```
-   O arquivo `test_functions.py` (ou conforme o nome do arquivo definido em `FILE_PATH`) será criado automaticamente.
+   O arquivo `test_<nome_do_arquivo>.py` (conforme o nome do arquivo definido em `FILE_PATH`) será criado automaticamente.
 
 4. **Execute os testes com pytest:**
 
    ```bash
-   pytest test_functions.py
+   pytest test_<nome_do_arquivo>.py
    ```
 
 ## Observações
